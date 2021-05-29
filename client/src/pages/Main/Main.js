@@ -80,7 +80,8 @@ class Main extends Component {
                             title: book.volumeInfo.title,
                             authors : book.volumeInfo.authors,
                             description : book.volumeInfo.description,
-                            link : book.volumeInfo.infoLink
+                            link : book.volumeInfo.infoLink,
+                            image: book.volumeInfo.imageLinks.thumbnail
                             })}
                         />
                         ))}
