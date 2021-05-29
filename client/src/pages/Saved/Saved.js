@@ -3,7 +3,6 @@ import { Col, Row, Container } from "../../components/Grid/Grid";
 import API from "../../utils/API"
 import Card from "../../components/Card/Card";
 import SavedBookDetail from "../../components/SavedBookDetail/SavedBookDetail";
-import Popup from 'react-popup';
 
 
 class Saved extends Component {
@@ -20,8 +19,6 @@ class Saved extends Component {
         API.deleteBook(id)
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
-        Popup.alert('I am alert, nice to meet you');
-
     }
     
     loadBooks = () => {
@@ -39,6 +36,7 @@ class Saved extends Component {
         return(
             <Container fluid>
            
+            
             <Row fluid>
                 <Col size="md-12">
                     {this.state.books.length ? (

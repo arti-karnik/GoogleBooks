@@ -76,7 +76,6 @@ class Main extends Component {
                             image =   {book.volumeInfo.imageLinks ?  book.volumeInfo.imageLinks.thumbnail : ""}
                             description = {book.volumeInfo.description}
                             link = {book.volumeInfo.infoLink}
-                            isImage ={book.volumeInfo.readingModes.image}
                             handleSave = {()=> this.handleSave({
                             title: book.volumeInfo.title,
                             authors : book.volumeInfo.authors,

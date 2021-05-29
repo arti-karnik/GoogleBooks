@@ -16,7 +16,7 @@ const BookDetail = props => {
 
   
   return (
-    <React.Fragment id="card">
+    <React.Fragment>
       <div className="row">
         <div className="col-8">
           <h5 className="card-title">{props.title}</h5>
