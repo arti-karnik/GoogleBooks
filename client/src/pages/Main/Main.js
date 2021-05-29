@@ -32,6 +32,8 @@ class Main extends Component {
                         books : res.data.items ,
                         title : ""
                     }); 
+                    console.log(this.state.books[0].volumeInfo.readingModes.image)
+
                 }else {
                     this.setState({
                         books : [] ,
@@ -47,7 +49,6 @@ class Main extends Component {
         API.saveBook(bookData)
             .then(res => console.log(res))
             .catch(err => console.log(err));
-        console.log("mimm");
     }
     
     render(){
@@ -68,10 +69,11 @@ class Main extends Component {
                     {this.state.books.length ? (
                     <Card heading="Search Results">
                         {this.state.books.map(book => (
+
                         <BookDetail key={book.id}
                             title = {book.volumeInfo.title}
                             authors = {book.volumeInfo.authors}
-                            image = {book.volumeInfo.readingModes.image ?  book.volumeInfo.imageLinks.thumbnail : ""}
+                            image =   {book.volumeInfo.imageLinks ?  book.volumeInfo.imageLinks.thumbnail : ""}
                             description = {book.volumeInfo.description}
                             link = {book.volumeInfo.infoLink}
                             isImage ={book.volumeInfo.readingModes.image}
