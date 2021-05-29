@@ -5,19 +5,18 @@
     "main": "server.js",
     "homepage": "https://arti-karnik.github.io/GoogleBooks",
     "scripts": {
-        "start": "node server.js",
+        "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+        "start:prod": "node server.js",
         "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
         "client": "cd client && npm run start",
-        "seed": "node scripts/seedDB.js",
         "install": "cd client && npm install",
         "build": "cd client && npm run build",
-        "heroku-postbuild": "npm run build",
-        "predeploy": "npm run build"
+        "heroku-postbuild": "npm run build"
     },
     "engines": {
         "npm": "6.14.11",
         "node": "14.15.5"
-      },
+    },
     "author": "",
     "license": "ISC",
     "devDependencies": {
@@ -33,6 +32,9 @@
         "gh-pages": "^3.2.0",
         "if-env": "^1.0.4",
         "mongoose": "^5.3.16",
-        "react-bootstrap": "^1.6.0"
+        "react-bootstrap": "^1.6.0",
+        "path": "^0.12.7",
+        "react": "^16.8.6",
+        "react-router-dom": "^5.0.0"
     }
 }
