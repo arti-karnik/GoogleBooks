@@ -13,8 +13,12 @@
         "build": "cd client && npm run build",
         "heroku-postbuild": "npm run build",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build",
     },
+    "engines": {
+        "npm": "5.6.0",
+        "node": "8.10.0"
+      },
     "author": "",
     "license": "ISC",
     "devDependencies": {
