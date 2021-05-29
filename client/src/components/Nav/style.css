@@ -1,5 +1,5 @@
 #nav-wrap{
-    background-color: aqua;
+    background-color: #609DA0;
 }
 .nav-link {
     color: white;
@@ -8,8 +8,13 @@
 
 }
 nav {
-    color: white;
+    color: black;
     background: teal;
+    background-color: cadetblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding-top: 20px;
+    height: 80px;
 }
 .navbar-brand {
     color: black;
@@ -18,3 +23,13 @@ img {
     height: 50px;
     width: 50px;
 }
+ .navbar-title {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: cursive;
+
+}
+

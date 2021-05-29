@@ -10,7 +10,7 @@ const BookDetail = props => {
       return <img className="image-icon" src={props.image} alt={props.image} />
       ;
     }
-    return <img className="image-icon" alt={props.image} />
+    return <img className="image-icon" src="./No-image-found.png" alt={props.image} />
     ;
   }
 
@@ -32,7 +32,7 @@ const BookDetail = props => {
       </div>
       <div className="row">
           <div className="col-2 text-left">
-            <IsImage isImage={props.image} image={props.image}></IsImage>
+            <IsImage image={props.image}></IsImage>
           </div>
           <div className="col-10">
               <p className="card-text">{props.description}</p>

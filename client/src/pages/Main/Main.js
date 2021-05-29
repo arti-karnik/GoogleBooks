@@ -5,8 +5,8 @@ import API from "../../utils/API"
 import Card from "../../components/Card/Card";
 import SearchForm from "../../components/SearchForm/SearchForm";
 import BookDetail from "../../components/BookDetail/BookDetail";
-
-
+import ReactDom from 'react-dom';
+import Popup from 'react-popup';
 class Main extends Component {
     state = {
         books : [],
@@ -27,6 +27,7 @@ class Main extends Component {
             .then(res => {
                 console.log(res.data.totalItems)
                 if (res.data.totalItems > 0) {
+
                     this.setState({
                         books : res.data.items ,
                         title : ""
@@ -46,21 +47,20 @@ class Main extends Component {
         API.saveBook(bookData)
             .then(res => console.log(res))
             .catch(err => console.log(err));
-
+        console.log("mimm");
     }
-
+    
     render(){
         return(
             <Container >
+                
             <Row>
-                <Col size="12">                    
-                <Card heading="Google Books Search">
-                    <SearchForm
+                <Col size="12"> 
+                <SearchForm
                         value={this.state.title}
                         handleInputChange={this.handleInputChange}
                         handleFormSubmit={this.handleFormSubmit}
-                    />
-                </Card>                   
+                    />          
                 </Col>
             </Row>
             <Row fluid>
@@ -71,14 +71,13 @@ class Main extends Component {
                         <BookDetail key={book.id}
                             title = {book.volumeInfo.title}
                             authors = {book.volumeInfo.authors}
-                            image = {book.volumeInfo.imageLinks.thumbnail ?  book.volumeInfo.imageLinks.thumbnail : ""}
+                            image = {book.volumeInfo.readingModes.image ?  book.volumeInfo.imageLinks.thumbnail : ""}
                             description = {book.volumeInfo.description}
                             link = {book.volumeInfo.infoLink}
                             isImage ={book.volumeInfo.readingModes.image}
                             handleSave = {()=> this.handleSave({
                             title: book.volumeInfo.title,
                             authors : book.volumeInfo.authors,
-                            image : book.volumeInfo.imageLinks.thumbnail,
                             description : book.volumeInfo.description,
                             link : book.volumeInfo.infoLink
                             })}
@@ -92,7 +91,6 @@ class Main extends Component {
                     )}
                 </Col>
             </Row>
-                
         </Container>
         );
     }
