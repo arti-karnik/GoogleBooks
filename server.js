@@ -22,7 +22,7 @@ app.use(routes);
 
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/Googlebooks',
+    process.env.MONGODB_URI || 'mongodb://localhost/GoogleBooks',
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
