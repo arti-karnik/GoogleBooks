@@ -1,0 +1,20 @@
+#nav-wrap{
+    background-color: aqua;
+}
+.nav-link {
+    color: white;
+    font-family: sans-serif;
+
+
+}
+nav {
+    color: white;
+    background: teal;
+}
+.navbar-brand {
+    color: black;
+}
+img {
+    height: 50px;
+    width: 50px;
+}

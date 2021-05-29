@@ -1,0 +1,39 @@
+.img-thumbnail {
+   height: 100px;
+   width: 1000x;
+}
+.row {
+    margin-bottom: 20px;
+}
+.card-link {
+    padding-left: 40;
+    padding-right: 40;
+    margin-bottom: 10;
+    float:"right";
+    margin-left: 10
+}
+.image-icon {
+    height: auto;
+    width: auto;
+}
+.button {
+    background-color: teal;
+    padding: 0 30 40 0;
+    margin: 0px 0px 10px 10px;
+    float:"right";
+}
+.card-link {
+    text-decoration: none;
+    background-color: teal;
+    padding: 0 30 40 0;
+    margin: 0px 0px 10px 10px;
+    float:"right";
+    height: 50px;
+    width: 50px;
+    color: black;
+}
+#card a:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
