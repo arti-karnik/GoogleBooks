@@ -22,6 +22,7 @@ Install NodeJS
 ![](./Assets/myGif.gif?raw=true)
 
 <img src="./Assets/SS1.png">
+<img src="./Assets/SS2.png">
 
 ## Technologyused:
 <ul>
