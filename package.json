@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
+    "homepage": "https://arti-karnik.github.io/GoogleBooks",
     "scripts": {
         "start": "node server.js",
         "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
@@ -10,7 +11,9 @@
         "seed": "node scripts/seedDB.js",
         "install": "cd client && npm install",
         "build": "cd client && npm run build",
-        "heroku-postbuild": "npm run build"
+        "heroku-postbuild": "npm run build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "author": "",
     "license": "ISC",
@@ -24,6 +27,7 @@
         "axios": "^0.18.0",
         "bootstrap": "^4.6.0",
         "express": "^4.16.3",
+        "gh-pages": "^3.2.0",
         "if-env": "^1.0.4",
         "mongoose": "^5.3.16",
         "react-bootstrap": "^1.6.0"
