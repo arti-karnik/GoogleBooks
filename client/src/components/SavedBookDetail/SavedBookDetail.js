@@ -2,6 +2,16 @@ import React from "react";
 import './style.css'
 
 const SavedBookDetail = props => {
+  function IsImage(props) {
+    const isImageExists = props.image;
+    if (isImageExists) {
+      return <img className="image-icon" src={props.image} alt={props.image} />
+      ;
+    }
+    return <img className="image-icon" src="./No-image-found.png" alt={props.image} />
+    ;
+  }
+  
   return (
     <span>
       <div className="row" style={{marginBottom:20}}>
@@ -19,6 +29,8 @@ const SavedBookDetail = props => {
       </div>
       <div className="row">
           <div className="col-2 text-center">
+             <IsImage image={props.image}></IsImage>
+
               <img src={props.image} alt="..." className="img-thumbnail" />
           </div>
           <div className="col-10">
